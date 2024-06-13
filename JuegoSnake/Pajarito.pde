@@ -1,0 +1,3 @@
+class Pajarito extends Animal{
+  
+}
