@@ -1,1 +1,6 @@
-class Time
+class Time{
+ 
+  public void getDeltaTime(float frames){
+    
+  }
+}

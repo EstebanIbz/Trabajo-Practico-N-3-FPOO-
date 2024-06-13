@@ -1,6 +1,8 @@
 class Snake{
   private PVector posicion;
   private PVector velocidad;
+  private Cabeza cabeza;
+  private Cuerpo cuerpo[];
   
   public Snake(){
   }
