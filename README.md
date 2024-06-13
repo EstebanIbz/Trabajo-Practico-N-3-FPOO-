@@ -1,7 +1,6 @@
-"GRUPO 04"
+"GRUPO 04" (Los Papure)
 
 INTEGRANTES: 
 
 - Juan Mateo Tarifa
-- Santiago Nicolas Ceballos
 - Esteban Agustin Ibañez
