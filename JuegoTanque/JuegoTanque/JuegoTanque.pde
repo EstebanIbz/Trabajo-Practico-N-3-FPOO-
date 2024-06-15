@@ -1,4 +1,4 @@
-//Tanque tanque;
+Tanque tanque;
 PImage fondo;
 
 void setup(){
@@ -12,5 +12,9 @@ void draw(){
 }
 
 void keyPressed(){
+  if(key == 'a') {
+    tanque.mover(1);
+  }
+  
   
 }
