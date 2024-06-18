@@ -4,11 +4,12 @@ private Escenario escenario;
 
 void setup(){
   size(600, 600);
- 
+  escenario = new Escenario();
 }
 
 void draw(){
-  background(0);
+  background(80);
+  escenario.display();
 }
 
 public void keyPressed(){
