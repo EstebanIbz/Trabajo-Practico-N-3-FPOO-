@@ -1,27 +1,25 @@
 Tanque tanque;
-PImage fondo,spriteMuro,spriteTanque,bala;
+Gestormuralla gestormuralla;
+PImage fondo,spriteMuro,spriteTanque,spriteBala;
 
 void setup(){
-  size(850, 531);
-  fondo = loadImage("fondo.png");
+  size(785, 442);
+  fondo = loadImage("fondo.jpg");
   spriteMuro = loadImage("muro1.jpg");
   spriteTanque = loadImage("tanke.PNG");
-  bala = loadImage("bala.png");
+  spriteBala = loadImage("bala.png");
   tanque = new Tanque(new PVector(width/2,height-80));
+  gestormuralla = new Gestormuralla(10);
 }
 
 void draw(){
   background(fondo);
-  tanque.display();  
+  tanque.move();  
+  tanque.display();
+  gestormuralla.actualizarColisiones(tanque);
+  gestormuralla.display();
 }
 
-void keyPressed() {
-
-  if (key == 'd') {
-   // tanque.mover();
-  }
-  
-  if (key == 'a') {
-   // tanque.mover(0);
-  }
- }
+void keyReleased(){
+ tanque.keyReleased(); 
+}

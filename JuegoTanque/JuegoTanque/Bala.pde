@@ -8,7 +8,7 @@ class Bala{
   this.velocidad = 2;
   this.transform = new Transform(posicion,new PVector(0.5,0.5));
   this.colision = new Collider(transform ,20);
-  this.imagen = new ImageComponent(spriteTanque , transform);
+  this.imagen = new ImageComponent(spriteBala , transform);
 }
 
   public void display(){
@@ -16,6 +16,10 @@ class Bala{
   }
   
   public void update(){
-    transform.move(0,velocidad);
+    transform.move(0,-velocidad);
   }
-}
+  
+  boolean isColliding(Muro muro){
+  return this.colision.isColliding(muro.colision);
+  }
+ }
