@@ -1,8 +1,5 @@
 class AnimalSpawner{
-  private Animal animales;
-  private int animalX;
-  private int animalY;
-  
+  ArrayList <Animal> animales;
  
   public AnimalSpawner(){
     
@@ -11,4 +8,8 @@ class AnimalSpawner{
   public void generarAnimal(Animal a){
     
   }
+  
+   public void eliminar(){
+   
+ }
 }
