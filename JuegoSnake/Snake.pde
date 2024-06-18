@@ -8,12 +8,22 @@ class Snake{
   }
   
   public void display(){
-  
   }
-  
-  public void mover(){
     
+    void move(float x, float y) {
+    position.add(x, y);
   }
+ }
+  
+    void move() {
+    if (keyPressed) {
+      if (key == 'w') transform.move(0, -speed);
+      if (key == 's') transform.move(0, speed);
+      if (key == 'a') transform.move(-speed, 0);
+      if (key == 'd') transform.move(speed, 0);
+    }
+  }
+
   
   public void comer(Animal a){
     
