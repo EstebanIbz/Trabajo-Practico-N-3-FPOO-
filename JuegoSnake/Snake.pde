@@ -4,12 +4,6 @@ class Snake {
   private Cabeza cabeza;
   private Cuerpo cuerpo[];
   Transform transform;
-  ArrayList<Integer> posX = new ArrayList<Integer>();
-  ArrayList<Integer> posY = new ArrayList<Integer>();
-
-  int dir = 1;
-  int[] dirX= {0, 0, -1, 1};
-  int[] dirY ={-1, 1, 0, 0};
   
   public Snake(PVector posicion) {
     this.velocidad = 2;
@@ -17,12 +11,9 @@ class Snake {
   }
 
   public void display() {
+  
   }
 
-  void move(float x, float y) {
-    position.add(x, y);
-  }
-}
 
 void move() {
   if (keyPressed) {
@@ -35,4 +26,5 @@ void move() {
 
 
 public void comer(Animal a) {
+}
 }
