@@ -8,5 +8,6 @@ class Collider{
  
  public void verificarCollider(Collider otroCollider){
    float distance = (PVector.dist(this.transform.position, otroCollider.transform.position));
+   
  }
 }
