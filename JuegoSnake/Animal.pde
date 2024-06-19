@@ -11,7 +11,7 @@ abstract class Animal{
    this.tamanio = 20;
    this.colorear = colorear;
    this.transform = new Transform(posicion, new PVector(1,1));
-   this.collider = new Collider(transform, (20));
+   this.collider = new Collider(transform, 6);
  }
  
  public void display(){
@@ -19,6 +19,6 @@ abstract class Animal{
    rect(this.transform.position.x+tamanio/2, this.transform.position.y+tamanio/2, tamanio, tamanio);
  }
  
- 
-  
+   abstract void eliminar(); 
 }
+  

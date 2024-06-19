@@ -5,7 +5,7 @@ class Cabeza{
  
  public Cabeza(PVector posicion, float velocidad){
    this.transform = new Transform(posicion, new PVector(1,1));
-   this.collider = new Collider(transform, 20);
+   this.collider = new Collider(transform, 6);
    this.velocidad = velocidad;
  }
 
@@ -13,8 +13,9 @@ class Cabeza{
    rect(this.transform.position.x, this.transform.position.y, 20,20);
  }
  
- public void Colision(Animal animal){
+ boolean Colision(Animal animal){
   float distance = (PVector.dist(this.transform.position, animal.transform.position));
+  return distance < this.collider.radius + animal.collider.radius;
 
  }
  
