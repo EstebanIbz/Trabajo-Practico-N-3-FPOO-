@@ -15,16 +15,6 @@ class Snake {
   }
 
 
-void move() {
-  if (keyPressed) {
-    if (key == 'w') this.transform.move(0, -velocidad);
-    if (key == 's') transform.move(0, velocidad);
-    if (key == 'a') transform.move(-velocidad, 0);
-    if (key == 'd') transform.move(velocidad, 0);
-  }
-}
-
-
 public void comer(Animal a) {
 }
 }

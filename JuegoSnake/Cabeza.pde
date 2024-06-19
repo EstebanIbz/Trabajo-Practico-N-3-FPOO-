@@ -9,10 +9,12 @@ class Cabeza{
    this.velocidad = velocidad;
  }
 
- 
+ public void display(){
+   
+ }
  
  boolean Colision(Animal animal){
-   float distance = (PVector.dist(this.posicion, animal.posicion));
+  float distance = (PVector.dist(this.transform.position, animal.transform.position));
    return true;
  }
  

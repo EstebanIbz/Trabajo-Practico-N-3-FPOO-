@@ -6,8 +6,10 @@ class Collider{
    this.radius = radius;
  }
  
- public void verificarCollider(Collider otroCollider){
-   float distance = (PVector.dist(this.transform.position, otroCollider.transform.position));
-   
- }
+ 
+ boolean isColliding(Collider other) {
+    float distance = PVector.dist(this.transform.position, other.transform.position);
+    return distance < this.radius + other.radius;
+  }
+
 }
