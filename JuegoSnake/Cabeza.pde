@@ -10,12 +10,12 @@ class Cabeza{
  }
 
  public void display(){
-   
+   rect(this.transform.position.x, this.transform.position.y, 20,20);
  }
  
- boolean Colision(Animal animal){
+ public void Colision(Animal animal){
   float distance = (PVector.dist(this.transform.position, animal.transform.position));
-   return true;
+
  }
  
  public void mover(){
