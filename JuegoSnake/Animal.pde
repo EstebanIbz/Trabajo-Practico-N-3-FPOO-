@@ -1,7 +1,7 @@
 abstract class Animal{
  //protected int tiempoEliminacion;
  protected int puntaje;
- int tamanio = 20;
+ int tamanio = 30;
  color colorear;
  Transform transform;
  Collider collider;
@@ -11,7 +11,7 @@ abstract class Animal{
    this.tamanio = 20;
    this.colorear = colorear;
    this.transform = new Transform(posicion, new PVector(1,1));
-   this.collider = new Collider(transform, 6);
+   this.collider = new Collider(transform, tamanio);
  }
  
  public void display(){

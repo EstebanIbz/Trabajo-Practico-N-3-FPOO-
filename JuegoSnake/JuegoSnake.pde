@@ -15,19 +15,19 @@ void setup(){
   pajarito = new Pajarito(new PVector(width/2, height-60), 10, #0C3FF0);
   raton = new Raton(new PVector(width-70, height-60), 10, #2BDB12);
   cabeza = new Cabeza(new PVector(width/2, height/2), 2);
-  collider = new Collider(transform, 0.1);
+  collider = new Collider(transform, 20);
   spawner = new AnimalSpawner(cabeza);
-  
+  spawner.generarAnimal(new Insecto(new PVector(width/2, height/2), 10, #E3021D));
+  spawner.generarAnimal(new Pajarito(new PVector(width/2, height-60), 10, #0C3FF0));
+  spawner.generarAnimal(new Raton(new PVector(width-70, height-60), 10, #2BDB12));
 }
 
 void draw(){
   background(80);
   escenario.display();
-  insecto.display();
-  pajarito.display();
-  raton.display();
   cabeza.display();
   cabeza.mover();
+  spawner.display();
   spawner.eliminar();
    if (cabeza.Colision(insecto)) {
     println("Colisión con insecto");
