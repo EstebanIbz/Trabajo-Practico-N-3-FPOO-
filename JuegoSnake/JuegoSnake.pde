@@ -12,7 +12,7 @@ void setup(){
   insecto = new Insecto(new PVector(width/2, height/2), 10, #E3021D);
   pajarito = new Pajarito(new PVector(width/2, height-60), 10, #0C3FF0);
   raton = new Raton(new PVector(width-70, height-60), 10, #2BDB12);
-  cabeza = new Cabeza(new PVector(width/2, height/2), 10);
+  cabeza = new Cabeza(new PVector(width/2, height/2), 2);
 }
 
 void draw(){
@@ -21,4 +21,7 @@ void draw(){
   insecto.display();
   pajarito.display();
   raton.display();
+  cabeza.display();
+  cabeza.mover();
+  cabeza.Colision(insecto);
 }
