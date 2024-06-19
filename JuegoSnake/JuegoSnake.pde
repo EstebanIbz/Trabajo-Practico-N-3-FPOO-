@@ -16,7 +16,8 @@ void setup(){
   raton = new Raton(new PVector(width-70, height-60), 10, #2BDB12);
   cabeza = new Cabeza(new PVector(width/2, height/2), 2);
   collider = new Collider(transform, 0.1);
-  spawner = new AnimalSpawner();
+  spawner = new AnimalSpawner(cabeza);
+  
 }
 
 void draw(){
@@ -27,6 +28,7 @@ void draw(){
   raton.display();
   cabeza.display();
   cabeza.mover();
+  spawner.eliminar();
    if (cabeza.Colision(insecto)) {
     println("Colisión con insecto");
   }else{
