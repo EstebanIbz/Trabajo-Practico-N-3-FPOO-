@@ -4,4 +4,6 @@ class Raton extends Animal{
     super(posicion, puntaje, colorear);
   }
   
+  void eliminar(){
+  }
 }
